@@ -13,6 +13,9 @@ const movieRoutes = require('./Routes/Movie')
 require('dotenv').config();
 require('./database')
 
+app.use(bodyParser.json());
+app.use(cookieParser())
+
 app.use(express.json());
 app.use("/auth", authRoutes)
 app.use("/admin", adminRoutes)
@@ -21,8 +24,6 @@ app.use("/movie", movieRoutes)
 app.get("/",(req, res) => {
     res.send("API works")
 })
-
-app.use(cookieParser())
 
 app.listen(PORT, ()=>{
     console.log("Server works");
