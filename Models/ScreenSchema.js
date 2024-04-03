@@ -13,10 +13,6 @@ const screenSchema = new mongoose.Schema({
         type: Array,
         required: true
     },
-    city: {
-        type: String,
-        required: true
-    },
     screenType: {
         type: String, // Example: "Standard", "IMAX", "VIP", etc.
         required: true
@@ -29,8 +25,7 @@ const screenSchema = new mongoose.Schema({
                 required: true
             },
             showTime: String,
-            notavailableseats: [String],
-            showDate: Date
+            notavailableseats: [String]
         }
     ]
 });

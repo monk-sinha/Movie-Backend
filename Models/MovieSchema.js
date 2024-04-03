@@ -9,11 +9,7 @@ const movieSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    portraitImgUrl: {
-        type: String,
-        required: true
-    },
-    landscapeImgUrl: {
+    imageURL: {
         type: String,
         required: true
     },
@@ -28,21 +24,7 @@ const movieSchema = new mongoose.Schema({
     duration: {
         type: Number, // Duration in minutes
         required: true
-    },
-    cast: [
-        {
-            actorName: String,
-            role: String,
-            imgURL: String
-        }
-    ],
-    crew: [
-        {
-            memberName: String,
-            role: String,
-            imgURL: String
-        }
-    ]
+    }
 });
 
 const Movie = mongoose.model('Movie', movieSchema);

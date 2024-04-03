@@ -5,10 +5,6 @@ const bookingSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    showDate: {
-        type: Date,
-        required: true
-    },
     movieid: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Movie', // Reference to the Movie model
